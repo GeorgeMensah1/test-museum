@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Museum</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+
+    <a-entity position="0 0.2 -3">
+        <a-cylinder color="blue" radius="0.5" height="0.1" class="teleport" teleport-to="#room2"></a-cylinder>
+    </a-entity>
+    <a-entity position="15 0.2 -3">
+        <a-cylinder color="blue" radius="0.5" height="0.1" class="teleport" teleport-to="#room3"></a-cylinder>
+    </a-entity>
+
+    <a-entity gltf-model="asset/codey.gltf" position="1 0 0"></a-entity>
+
+
+    <!-- Camera & Controls -->
+    <a-entity position="0 1.6 0">
+        <a-camera>
+            <a-cursor color="black"></a-cursor>
+        </a-camera>
+    </a-entity>
+
+    <!-- Room 1: Early Days -->
+    <a-entity id="room1" position="0 0 0">
+        <a-box position="0 0 -5" width="10" height="5" depth="0.2" color="#FFDAB9"></a-box>
+        <a-text value="Early Days" position="-1.5 2 -4.8" color="black"></a-text>
+    </a-entity>
+
+    <!-- Room 2: Passions & Achievements -->
+    <a-entity id="room2" position="15 0 0">
+        <a-box position="0 0 -5" width="10" height="5" depth="0.2" color="#ADD8E6"></a-box>
+        <a-text value="Passions & Achievements" position="-3 2 -4.8" color="black"></a-text>
+    </a-entity>
+
+    <!-- Room 3: Legacy & Love -->
+    <a-entity id="room3" position="30 0 0">
+        <a-box position="0 0 -5" width="10" height="5" depth="0.2" color="#E6E6FA"></a-box>
+        <a-text value="Legacy & Love" position="-2 2 -4.8" color="black"></a-text>
+    </a-entity>
+
+</a-scene>
+</body>
+</html>
