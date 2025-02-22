@@ -12,12 +12,31 @@
 
 <body>
 
+    
 
 <a-scene>
 
 
 
-    <a-link href="trial.html" title="My Homepage"></a-link>
+    <a-assets>
+
+        <img id="home" src="hello.jpeg">
+
+      </a-assets>
+
+
+
+    <a-entity geometry="primitive: plane; width: 2; height: 1"
+
+    material="src: #home"
+
+    position="0 1.5 -3"
+
+    link="href: trial.html; title: My Homepage">
+
+    </a-entity>
+
+  
 
 
 
